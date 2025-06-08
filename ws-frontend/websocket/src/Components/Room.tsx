@@ -19,7 +19,7 @@ const Room = () => {
       }
     }
     setusername(usr || "");
-    let socket = new WebSocket("ws://localhost:8080");
+    let socket = new WebSocket("wss://chat-app-backend-mn64.onrender.com/");
     ws.current = socket;
     socket.onopen = () => {
       socket.send(

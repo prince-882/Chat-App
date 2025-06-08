@@ -39,7 +39,7 @@ wss.on("connection", function (socket) {
                 GlobalArray = GlobalArray.filter(el => el.socket !== socket);
             });
         }
-    });
+  });
 });
 console.log(JSON.stringify({
     type: "join",
