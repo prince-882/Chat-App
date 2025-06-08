@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router";
 const Room = () => {
   interface message {
@@ -55,18 +55,6 @@ const Room = () => {
       })
     );
     setData("");
-  }
-  function HandleEnter(e: React.KeyboardEvent<HTMLInputElement>) {
-    if (!ws.current) return;
-    ws.current.send(
-      JSON.stringify({
-        type: "chat",
-        payload: {
-          message: data,
-          username,
-        },
-      })
-    );
   }
   return (
     <>
